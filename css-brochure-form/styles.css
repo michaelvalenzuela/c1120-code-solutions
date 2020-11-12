@@ -1,0 +1,61 @@
+h2 {
+  text-align: center;
+  color: orangered;
+  font-family: "AtlasGrotesk", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .08em;
+}
+
+fieldset {
+  justify-content: center;
+  width: 400px;
+  margin: auto;
+  border: none;
+}
+
+label {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-size: .7rem;
+  padding-left: 5px;
+}
+
+form{
+  font-weight: bold;
+}
+
+::placeholder {
+  color: lightgray;
+}
+
+.submit-input {
+  text-align: right;
+  border-radius: 30px;
+  background-color: orangered;
+  color: white;
+  float: right;
+  line-height: 1.5;
+  margin: 5px;
+  padding: 6px 15px;
+  border: whitesmoke;
+}
+
+.standard-input{
+  width: 400px;
+  height: 34px;
+  border-radius: 5px;
+  border-color: whitesmoke;
+  border-style: groove;
+  margin-bottom: .5rem;
+  padding-left: 5px;
+}
+
+.select-hiring {
+  width: 400px;
+  height: 34px;
+  border-radius: 5px;
+  border-color: whitesmoke;
+  background-color: #ededed;
+  border-style: groove;
+  margin-bottom: .5rem;
+  padding-left: 5px;
+}
