@@ -1,0 +1,246 @@
+.container {
+max-width: 1000px;
+padding: 2px 10px;
+position: relative;
+}
+
+/**Top half**/
+.top {
+  display: flex;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.top-nav {
+  position: absolute;
+  padding-top: 35px;
+  left: 21%;
+  margin-bottom: 0;
+  border: none;
+}
+
+.top-nav a {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  left: 70%;
+  padding: 10px 10px;
+  color: gray;
+  border: none;
+  font-family: "Tiempos Headline";
+}
+
+.top-nav a:hover {
+  background-color: navy;
+  color: white;
+  border-radius: 5%;
+}
+
+.top-nav a.active {
+  background-color: navy;
+  color: white;
+  border-radius: 5%;
+}
+
+.title-text {
+  font-family: "Tiempos Headline";
+  color: navy;
+  margin-bottom: 0;
+}
+
+.top {
+  border-bottom: lightgray 1px inset;
+}
+
+/**Summary**/
+.summary-container {
+  position: relative;
+  background-image: url(images/hero.jpg);
+  background-size: cover;
+  width: auto;
+  height: 400px;
+  top: 30px;
+}
+
+.summary-title {
+  position: relative;
+  font-family: "Tiempos Headline";
+  top: 40px;
+  width: 40%;
+  left: 45px;
+  color: white;
+}
+
+.summary-text {
+  font-family: "Avenir";
+  position: relative;
+  top: 40px;
+  left: 45px;
+  color: white;
+  width: 50%;
+}
+
+.overlay {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.40));
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.btn-get-started {
+  position: absolute;
+  font-family: "Avenir";
+  bottom: 35px;
+  left: 40px;
+  background-color: navy;
+  text-align: center;
+  color: white;
+  width: 140px;
+  height: 34px;
+  border-radius: 5%;
+  font-size: 15px;
+}
+
+/**clients**/
+.clients-container {
+  position: relative;
+  width: auto;
+  height: 300px;
+  top: 50px;
+  text-align: center;
+  background:  rgb(236, 236, 236);
+}
+
+.clients-title {
+  position: relative;
+  font-family: "Tiempos Headline";
+  font-size: 25px;
+  font-weight: lighter;
+  top: 20px;
+}
+
+.clients-text {
+  position: relative;
+  font-family: "Tiempos Headline";
+  font-weight: lighter;
+  top: 10px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 1.5rem;
+}
+
+.clients-table {
+  position: relative;
+  font-weight: lighter;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-spacing: 150px 10px;
+}
+
+td {
+  font-family: "Tiempos Headline";
+}
+
+/**Schedule**/
+.schedule-container {
+  position: relative;
+  top: 50px;
+  left: 70px;
+}
+
+.schedule-title {
+  font-family: "Tiempos Headline";
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.schedule-text {
+  font-family: "Tiempos Headline";
+  font-size: 15px;
+}
+
+.btn-get-started-schedule {
+  position: absolute;
+  font-family: "Avenir";
+  background-color: navy;
+  text-align: center;
+  right: 15%;
+  top: 10%;
+  color: white;
+  width: 140px;
+  height: 34px;
+  border-radius: 5%;
+  font-size: 15px;
+}
+
+/**Info**/
+.info-container{
+  position: relative;
+  background-color: rgb(68, 65, 65);
+  color: white;
+  font-family: "Tiempos Headline";
+  display: flex;
+  top: 60px;
+  height: 250px;
+}
+
+.info-title {
+  position: relative;
+  font-size: 35px;
+  font-weight: lighter;
+  left: 60px;
+  margin-bottom: 30px;
+}
+
+.info-address {
+  position: relative;
+  left: 60px;
+  font-size: 12px;
+  line-height: 1.5rem;
+}
+
+.info-col {
+  width: calc(100%/3);
+}
+
+.info-company-ul {
+  position: relative;
+  left: 40%;
+  top: 50px;
+  list-style-type: none;
+  line-height: 2.5rem;
+  font-weight: 100;
+}
+
+.info-product-ul {
+  position: relative;
+  top: 50px;
+  list-style-type: none;
+  line-height: 2.5rem;
+  font-weight: 100;
+}
+
+.footer-container {
+  position:relative;
+  top: 60px;
+}
+
+.footer-nav {
+  font-family: "Tiempos Headline";
+  position: relative;
+  padding-top: 30px;
+  border: none;
+}
+
+.footer-nav a {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  left: 5%;
+  padding: 10px 10px;
+  color: gray;
+  border: none;
+}
