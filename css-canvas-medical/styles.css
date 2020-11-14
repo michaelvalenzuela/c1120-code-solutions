@@ -12,10 +12,17 @@ position: relative;
   padding: 20px;
 }
 
+.img-header {
+  position: relative;
+  height: 60%;
+  width: 60%;
+  top: 40%;
+}
+
 .top-nav {
   position: absolute;
-  padding-top: 35px;
   left: 21%;
+  padding-top: 10px;
   margin-bottom: 0;
   border: none;
 }
@@ -32,20 +39,20 @@ position: relative;
 }
 
 .top-nav a:hover {
-  background-color: navy;
+  background-color: #294464;
   color: white;
   border-radius: 5%;
 }
 
 .top-nav a.active {
-  background-color: navy;
+  background-color: #294464;
   color: white;
   border-radius: 5%;
 }
 
 .title-text {
   font-family: "Tiempos Headline";
-  color: navy;
+  color: #14496b;
   margin-bottom: 0;
 }
 
@@ -59,13 +66,14 @@ position: relative;
   background-image: url(images/hero.jpg);
   background-size: cover;
   width: auto;
-  height: 400px;
+  height: 525px;
   top: 30px;
 }
 
 .summary-title {
   position: relative;
   font-family: "Tiempos Headline";
+  font-size: 35px;
   top: 40px;
   width: 40%;
   left: 45px;
@@ -79,6 +87,7 @@ position: relative;
   left: 45px;
   color: white;
   width: 50%;
+  line-height: 2rem;
 }
 
 .overlay {
@@ -93,11 +102,11 @@ position: relative;
   font-family: "Avenir";
   bottom: 35px;
   left: 40px;
-  background-color: navy;
+  background-color: #294464;
   text-align: center;
   color: white;
   width: 140px;
-  height: 34px;
+  height: 50px;
   border-radius: 5%;
   font-size: 15px;
 }
@@ -106,24 +115,24 @@ position: relative;
 .clients-container {
   position: relative;
   width: auto;
-  height: 300px;
+  height: 350px;
   top: 50px;
   text-align: center;
-  background:  rgb(236, 236, 236);
+  background:  rgb(250,250,250);
 }
 
 .clients-title {
   position: relative;
   font-family: "Tiempos Headline";
   font-size: 25px;
-  font-weight: lighter;
   top: 20px;
+  color: #737373;
 }
 
 .clients-text {
   position: relative;
   font-family: "Tiempos Headline";
-  font-weight: lighter;
+  color: #737373;
   top: 10px;
   width: 50%;
   left: 50%;
@@ -133,11 +142,11 @@ position: relative;
 
 .clients-table {
   position: relative;
-  font-weight: lighter;
+  color: #737373;
   top: 30px;
   left: 50%;
   transform: translate(-50%, 0);
-  border-spacing: 150px 10px;
+  border-spacing: 150px 20px;
 }
 
 td {
@@ -165,13 +174,13 @@ td {
 .btn-get-started-schedule {
   position: absolute;
   font-family: "Avenir";
-  background-color: navy;
+  background-color: #294464;
   text-align: center;
   right: 15%;
   top: 10%;
   color: white;
   width: 140px;
-  height: 34px;
+  height: 50px;
   border-radius: 5%;
   font-size: 15px;
 }
@@ -179,12 +188,12 @@ td {
 /**Info**/
 .info-container{
   position: relative;
-  background-color: rgb(68, 65, 65);
-  color: white;
+  background-color: rgb(82,83,81);
+  color: rgb(243,243,243);
   font-family: "Tiempos Headline";
   display: flex;
   top: 60px;
-  height: 250px;
+  height: 300px;
 }
 
 .info-title {
@@ -226,6 +235,8 @@ td {
 .footer-container {
   position:relative;
   top: 60px;
+  background-color: #fafafa;
+  height: 100px;
 }
 
 .footer-nav {
@@ -241,6 +252,6 @@ td {
   overflow: hidden;
   left: 5%;
   padding: 10px 10px;
-  color: gray;
+  color: #898989;
   border: none;
 }
