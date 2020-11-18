@@ -1,0 +1,103 @@
+.container {
+  align-items: center;
+  font-family: "Karla";
+  padding: 10px;
+  justify-content: center;
+}
+
+.title-container{
+  text-align: center;
+  margin: auto;
+  width: 700px;
+}
+
+.title-text {
+  font-size: 55px;
+  letter-spacing: 2px;
+}
+
+.summary-text {
+  position: relative;
+  line-height: 1.75rem;
+  bottom: 15px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 1000px;
+  position: relative;
+}
+
+
+.benefit-img{
+  position: relative;
+  width: 100px;
+  margin-right: 5px;
+}
+
+.img-left {
+
+}
+
+.img-right {
+  left: 50px;
+}
+
+.col {
+  position: relative;
+  flex: 50%;
+  margin-right: 20px;
+  padding-right: 60px;
+}
+
+.col-left {
+  float:left;
+  left: 55px;
+
+}
+
+.col-right {
+  left: 90px;
+}
+
+.benefit-container {
+  position: relative;
+  right: 35px;
+  padding-right: 10px;
+}
+
+.benefit-description-text {
+  position: relative;
+  bottom: 10px;
+  line-height: 1.75rem;
+  font-size: 15px;
+  padding-right: 25px;
+}
+
+.row-mid {
+  top: 20px;
+}
+
+.row-bottom {
+  top: 80px;
+}
+
+.learn-more-btn {
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #d96964;
+  border-color: #d96964;
+  border: solid 2.5px;
+  height: 40px;
+  width: 200px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+.row-btn {
+  top: 110px;
+}
