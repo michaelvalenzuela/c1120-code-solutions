@@ -1,0 +1,38 @@
+ins {
+  background-color: #eee3d9;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  height: 500px;
+}
+
+span, del {
+  color: #e0e0e0;
+  font-weight: normal;
+}
+
+
+.container {
+  font-family: "DM sans";
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.col {
+  display: column;
+  text-align: left;
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+}
