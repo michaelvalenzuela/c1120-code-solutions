@@ -28,5 +28,3 @@ function handleDoubleClick(event){
 let dblClickButton = document.querySelector(".double-click-button");
 
 dblClickButton.addEventListener("dblclick", handleDoubleClick);
-
-//console.log("button");
