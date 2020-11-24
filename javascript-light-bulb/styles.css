@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 800px;
+}
+
+.circle{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.lights-circle-0 {
+  box-shadow: 5px 5px 5px 10px #252525;
+  color: #252525;
+  background-color: #252525;
+}
+
+.lights-circle-1 {
+  box-shadow: 5px 5px 5px 10px #faea84;
+  color: #faea84;
+  background-color: #faea84;
+}
+
+.lights-container-1 {
+  background-color: #fef9f1;
+}
+
+.lights-container-0 {
+  background-color:black;
+}
