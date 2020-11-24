@@ -1,0 +1,56 @@
+.container {
+  position: absolute;
+  font-family: sans-serif;
+}
+
+.open-btn{
+  width: 175px;
+  height: 40px;
+  background-color: #4a4ae9;
+  color:white;
+  font-size: 20px;
+  border-radius: 5px;
+  box-shadow: 10px;
+}
+
+.modal-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 80%;
+  width: 800px;
+  height: 800px;
+  background-color: black;
+}
+
+.modal {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  width: 350px;
+  height: 150px;
+  position: fixed;
+  border-radius: 5px;
+  line-height: 3rem;
+}
+
+.close-btn {
+  background-color: #eb5d5d;
+  color: white;
+  width: 70px;
+  height: 35px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.modal-title {
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.hide {
+  display: none;
+}
