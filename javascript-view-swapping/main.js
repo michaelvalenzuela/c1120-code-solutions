@@ -16,7 +16,6 @@ $tabContainer.addEventListener("click", function(e){
     }
 
     for(view of $allViews){
-      console.log(view);
       if(view.getAttribute("data-view") === $dataView){
         view.classList.remove("hidden");
       }
