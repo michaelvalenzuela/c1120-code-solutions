@@ -1,4 +1,3 @@
-let $text = document.querySelector(".text");
 let $spans = document.querySelectorAll(".span");
 let current = 0;
 $spans[current].classList.add("curr");
