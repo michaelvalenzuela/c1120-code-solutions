@@ -1,11 +1,13 @@
 let $h1 = document.querySelector("h1");
 
-setInterval(function() {
-  if($h1.textContent > 0){
-    $h1.textContent -= 1;
+var id = setInterval(function() {
+  let counter = $h1.textContent;
+  if(counter > 0){
+    counter -= 1;
+    $h1.textContent = counter;
   }
   else{
     $h1.textContent = "~Earth Beeeelooowww Us~";
-    clearInterval(1);
+    clearInterval(id);
   }
 }, 2000);
