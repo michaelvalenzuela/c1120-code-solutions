@@ -5,17 +5,18 @@ let $slides = document.querySelectorAll(".slide");
 let $bullets = document.querySelectorAll(".bullet");
 let $prevArrow = document.getElementById("prevArrow");
 let $nextArrow = document.getElementById("nextArrow");
+let $bulletContainer = document.querySelector('.bullet-container')
 let length = $slides.length-1;
 
 timerId = setTimeout(function(){
   changeSlide(currentSlide+1);
 }, 3000);
 
-for(let i = 0; i < $bullets.length; i++){
-  $bullets[i].addEventListener("click", function(e){
-    changeSlide(i);
-  });
-}
+$bulletContainer.addEventListener('click', function (e) {
+  if (!e.target.classList.has('bullet')) return;
+  let index = e.target.dataset.index;
+  changeSlide(index);
+});
 
 $prevArrow.addEventListener("click", function(e){
   changeSlide(currentSlide-1);
