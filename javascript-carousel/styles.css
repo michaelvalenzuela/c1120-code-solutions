@@ -20,7 +20,7 @@
   width: 1rem;
 }
 
-.bullet:hover, .select, .prev:hover, .next:hover {
+.bullet:hover, .selected, .prev:hover, .next:hover {
   background-color: gray;
 }
 
