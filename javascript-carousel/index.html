@@ -11,11 +11,31 @@
 </head>
 <body>
   <div class="carousel-container">
-    <i onclick="prevSlide()" class="fas fa-chevron-left prev"></i>
-    <i onclick="nextSlide()" class="fas fa-chevron-right next"></i>
+    <div class="slide">
+      <img src="images/001.png" alt="Bulbasaur">
+    </div>
+    <div class="slide hide">
+      <img src="images/004.png" alt="Charmander">
+    </div>
+    <div class="slide hide">
+      <img src="images/007.png" alt="Squirtle">
+    </div>
+    <div class="slide hide">
+      <img src="images/025.png" alt="Pikachu">
+    </div>
+    <div class="slide hide">
+      <img src="images/039.png" alt="Jigglepuff">
+    </div>
+    <i id="prevArrow" class="fas fa-chevron-left prev"></i>
+    <i id="nextArrow" class="fas fa-chevron-right next"></i>
   </div>
 
   <div class="bullet-container">
+    <span class="bullet selected"></span>
+    <span class="bullet"></span>
+    <span class="bullet"></span>
+    <span class="bullet"></span>
+    <span class="bullet"></span>
   </div>
 
   <script src="main.js"></script>

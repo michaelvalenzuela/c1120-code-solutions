@@ -1,85 +1,50 @@
 let imagePaths = ["images/001.png", "images/004.png", "images/007.png", "images/025.png", "images/039.png", ]
 let currentSlide = 0;
-var timerId = null;
+let timerId = null;
+let $slides = document.querySelectorAll(".slide");
+let $bullets = document.querySelectorAll(".bullet");
+let $prevArrow = document.getElementById("prevArrow");
+let $nextArrow = document.getElementById("nextArrow");
+let length = $slides.length-1;
 
-renderCarousel();
-timerId = setTimeout(nextSlide, 3000);
+timerId = setTimeout(function(){
+  changeSlide(currentSlide+1);
+}, 3000);
 
-
-function renderCarousel(){
-  let $carouselContainer = document.querySelector(".carousel-container");
-  let $bulletContainer = document.querySelector(".bullet-container");
-
-  for(let i = 0; i < imagePaths.length; i++){
-    let $div = document.createElement("div");
-    $div.classList.add("slide");
-    if(i !== 0){
-      $div.classList.add("hide");
-    }
-
-    let $image = document.createElement("img");
-    $image.setAttribute("src", imagePaths[i]);
-    $image.setAttribute("alt", imagePaths[i].slice(imagePaths[i].length-7));
-
-    $div.appendChild($image);
-    $carouselContainer.appendChild($div);
-
-    //create a bullet
-    let $bullet = document.createElement("a");
-    $bullet.classList.add("bullet");
-    if(i === 0){
-      $bullet.classList.add("select");
-    }
-    $bullet.setAttribute("onclick", "showSlide("+i+")");
-    $bulletContainer.appendChild($bullet);
-  }
+for(let i = 0; i < $bullets.length; i++){
+  $bullets[i].addEventListener("click", function(e){
+    changeSlide(i);
+  });
 }
 
-function nextSlide(){
-  let $slides = document.querySelectorAll(".slide");
+$prevArrow.addEventListener("click", function(e){
+  changeSlide(currentSlide-1);
+});
 
-  if(currentSlide === $slides.length-1){
-    showSlide(0);
-  }
-  else{
-    showSlide(currentSlide + 1);
-  }
-}
+$nextArrow.addEventListener("click", function(e){
+  changeSlide(currentSlide+1);
+});
 
-function prevSlide(){
-  let $slides = document.querySelectorAll(".slide");
+function changeSlide(slide){
+  $slides[currentSlide].classList.add("hide");
+  $bullets[currentSlide].classList.remove("selected");
 
-  if(currentSlide === 0){
-    showSlide($slides.length-1);
-  }
-  else{
-    showSlide(currentSlide-1);
-  }
-}
-
-function showSlide(slideNumber){
-  let $slides = document.querySelectorAll(".slide");
-  let $bullets = document.querySelectorAll(".bullet");
   clearTimeout(timerId);
-  timerId = setTimeout(nextSlide, 3000);
+  timerId = setTimeout(function(e){
+    changeSlide(currentSlide+1);
+  }, 3000);
 
-  currentSlide = slideNumber;
-  for(let i = 0; i < $slides.length; i++){
-    if (!$slides[i].classList.contains("hide")) {
-      $slides[i].classList.add("hide");
-    }
-    if(i === slideNumber){
-      $slides[i].classList.remove("hide");
-    }
+  if(slide < 0){
+    currentSlide = length;
+  }
+  else if(slide > length){
+    currentSlide = 0;
+  }
+  else{
+    currentSlide = slide;
   }
 
-  for(let i = 0; i < $bullets.length; i++){
-    if (!$bullets[i].classList.contains("hide")) {
-      $bullets[i].classList.remove("select");
-    }
-    if (i === slideNumber) {
-      $bullets[i].classList.add("select");
-    }
-  }
+  $slides[currentSlide].classList.remove("hide");
+  $bullets[currentSlide].classList.add("selected");
 
 }
