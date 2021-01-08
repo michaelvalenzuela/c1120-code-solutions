@@ -17,12 +17,13 @@ app.get('/api/notes', (req, res) => {
 });
 
 app.get('/api/notes/:id', (req, res) => {
-  if (req.params.id < 0) {
+  const id = parseInt(req.params.id, 10);
+  if (id < 0) {
     res.status(400).json({ Error: 'ID must be a positive number' });
-  } else if (notes[req.params.id]) {
-    res.status(200).json(notes[req.params.id]);
+  } else if (notes[id]) {
+    res.status(200).json(notes[id]);
   } else {
-    res.status(404).json({ Error: `ID:${req.params.id} does not exist` });
+    res.status(404).json({ Error: `ID:${id} does not exist` });
   }
 });
 
@@ -39,43 +40,45 @@ app.post('/api/notes', (req, res) => {
         res.status(500).json({ Error: 'An Unexpected error occurred.' });
         throw err;
       } else {
-        res.status(201).json(note.id);
+        res.status(201).json(notes[note.id]);
       }
     });
   }
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-  if (req.params.id < 0) {
+  const id = parseInt(req.params.id, 10);
+  if (id < 0) {
     res.status(400).json({ Error: 'id must be a positive integer' });
-  } else if (!notes[req.params.id]) {
-    res.status(404).json({ Error: `ID:${req.params.id} does not exist` });
+  } else if (!notes[id]) {
+    res.status(404).json({ Error: `ID:${id} does not exist` });
   } else {
-    delete notes[req.params.id];
+    delete notes[id];
     fs.writeFile('./data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         res.status(500).json({ Error: 'An Unexpected error occurred.' });
         throw err;
       } else {
-        res.status(204).json(notes[req.params.id]);
+        res.sendStatus(204);
       }
     });
   }
 });
 
 app.put('/api/notes/:id', (req, res) => {
-  if (req.params.id < 0 || !req.body.content) {
+  const id = parseInt(req.params.id, 10);
+  if (id < 0 || !req.body.content) {
     res.status(400).json({ Error: 'id must be a positive integer and content is a required field' });
-  } else if (!notes[req.params.id]) {
-    res.status(404).json({ Error: `ID:${req.params.id} does not exist` });
+  } else if (!notes[id]) {
+    res.status(404).json({ Error: `ID:${id} does not exist` });
   } else {
-    notes[req.params.id].content = req.body.content;
+    notes[id].content = req.body.content;
     fs.writeFile('./data.json', JSON.stringify(data, null, 2), err => {
       if (err) {
         res.status(500).json({ Error: 'An Unexpected error occurred.' });
         throw err;
       } else {
-        res.status(200).json(notes[req.params.id]);
+        res.status(200).json(notes[id]);
       }
     });
   }
