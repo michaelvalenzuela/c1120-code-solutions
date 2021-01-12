@@ -1,0 +1,6 @@
+ actorId | firstName |  lastName  |           updatedAt           
+---------+-----------+------------+-------------------------------
+     202 | Michael   | Valenzuela | 2021-01-12 10:27:30.410188-08
+(1 row)
+
+INSERT 0 1
