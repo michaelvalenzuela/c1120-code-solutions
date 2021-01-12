@@ -1,0 +1,11 @@
+ firstName | lastName 
+-----------+----------
+ Derrick   | Bourque
+ Guy       | Brownlee
+ Ron       | Deluca
+ Clayton   | Barbee
+ Amanda    | Carter
+ Jon       | Wiles
+ Barbara   | Jones
+(7 rows)
+
