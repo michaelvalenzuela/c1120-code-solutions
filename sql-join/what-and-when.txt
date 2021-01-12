@@ -1,0 +1,5 @@
+ releaseYear | name  
+-------------+-------
+        2006 | Music
+(1 row)
+
