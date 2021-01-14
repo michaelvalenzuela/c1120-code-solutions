@@ -1,0 +1,9 @@
+ filmId |       title       | netGain 
+--------+-------------------+---------
+    893 | Titans Jerk       |  105.79
+    551 | Maiden Home       |  103.82
+    941 | Videotape Arsenic |  101.78
+    501 | Kissing Dolls     |   97.85
+    979 | Witches Panic     |   96.77
+(5 rows)
+
