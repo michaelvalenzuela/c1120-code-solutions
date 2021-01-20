@@ -1,0 +1,38 @@
+.toggle {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid black;
+}
+
+.circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.off {
+  left: -1px;
+}
+
+.on {
+  right: -1px;
+}
+
+.text-position {
+  position: relative;
+  left: 120px;
+  top: 7px;
+}
+
+.green {
+  background-color: green;
+}
+
+.gray {
+  background-color: gray;
+}
