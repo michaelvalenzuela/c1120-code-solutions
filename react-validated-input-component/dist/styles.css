@@ -1,0 +1,15 @@
+label {
+  display: block;
+}
+
+.fa-check {
+  color: green;
+}
+
+.fa-times {
+  color: red;
+}
+
+p {
+  color: red;
+}
