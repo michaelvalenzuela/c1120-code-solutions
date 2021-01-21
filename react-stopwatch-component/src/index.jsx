@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom';
 import Stopwatch from './stopwatch';
 
 ReactDOM.render(
-  <Stopwatch></Stopwatch>,
+  <Stopwatch/>,
   document.getElementById('root')
 );
