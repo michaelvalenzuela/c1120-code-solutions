@@ -1,0 +1,51 @@
+User can sign up:
+Beginning from the render method of the App.jsx, the code will first check that the state is currently authorizing a user. If this is true then the code will then assign the user and route properties of the this object’s state property, along with the handleSignIn and handleSignOut of the this object. During the return, an AppContext jsx element is created to wrap all other elements that will be returned. The value of this AppContext element will be set to contextValue so all other elements and its descendants may access the contextValue using this.Context. The page will then render both the navbar and PageContainer using the the contextValue in the form of this.context passed from AppContext. When creating a PageContainer, the code will look for the renderPage() method of the App.jsx. In reference to Sign Up, this code will look for a path of ‘sign-in’ or ‘sign up’. If either then it will return the Auth JSX element.
+
+The Authpage will have already had its contextType set to AppContext. Once Auth is being rendered, it will get the user, route, and handle sign in from the context property of the this object. If there is a user then the page will be redirected to the “” path. The code will then check if the path is set to “sign-in”, if this is false then the user will see a “Create an account to get started!” message. Once the render method has begun returning, the html is generated and creates an AuthForm JSX element. The element is passed the route.path and handleSignIn properties as props.
+
+The Authform is then rendered with the given properties. Once a user puts information on the form and clicks submit, the code will fire an OnSubmit event which will trigger the handleSubmit function. This function will create a POST request that will send the state as body and use fetch to submit the request to the /api/auth/sign-up endpoint on the server.
+
+Once on the server, the username and password of the request body will be checked. If either does not exist then a 400 error will be sent back to the user. Otherwise, argon2 will begin to hash the password and store the hashed password into the database. Once the db has processed the server’s query, it will receive a response with the new db row. The client is then sent a response with the db data and status code.
+
+Once the client receives this response, the user will be redirected to the sign up page.
+
+User can sign in:
+Referring to when the code is rendering the Auth JSX element, the code will create a welcomeMessage of “Please sign in to continue”. The code will then render the html code and pass the rout.path and handleSignIn to the AuthForm JSX as props.
+
+In the AuthForm.jsx, the code will render with action set to “sign-in” and once the user submits, the code will go through the handleSubmit function. In this function the code will fetch a response from the /api/auth/sign-in end point on the server.
+
+The server will then check that the body has the username and password. If the body has the information then it will send a query to the db to look for the given userId. If the userId is found then the code will unhash the password with argon2 and verify if the password entered matches. If it does then return a response containing a token and the user as the payload.
+
+If a user and token were sent back then pass the response to the handleSignIn function of the app.jsx. In the handleSignIn method, the token is stored in local storage under the key “react-context-jwt” and the state is set to the user, triggering a rerender.
+
+User can stay signed in:
+The code will have an event listener listening for hashchange events. Everytime this is triggered, the code will get the token in storage and decode the token to get a user. If a user is found then the state will be set to user and will remain in an “isAuthorizing = false” state. Otherwise the user will be sent back to the sign in page.
+
+User can sign out:
+If the signout button of the navbar is clicked, then a handleSignOut from the app.jsx method is called. The token under the key ‘react-context-jwt’ will be removed and the state of the user will be set to null. Returning the user to the sign in page.
+
+
+Basic Flow of App.jsx:
+1. Index.jsx is ran and the ReactDOM begins to render the <App> jsx element
+2. The App begins by importing AppContext, pages, components, and middleware
+3. The constructor then initializes the apps state, props, and functions
+4. The react obj will then render
+5. When rendering, the user, route, handleSingIn, handleSingOut will be passed into the contextValue variable
+6. A context element will then have its value set to contextValue and wrap all jsx elements being returned.
+
+7. Navbar will then be rendered and have its .contextType set to AppContext, providing this.context values
+8. The PageContainer will then render either the Home page or Auth page
+9. If the route is set to '' then a Home page will be rendered
+	9a. The Home page will render and check if a user is logged in within the context, otherwise redirect to the sign in page
+10. If the route is set to 'sign-in' or 'sign-up' then the Auth page will be rendered
+	10a. The Auth page will be rendered and derive its user, route, and handle signIn from this.context
+	10b. When returning the route.path and handleSignIn will be passed to the AuthForm components
+	10c. The auth form will receive the context in the form of props
+	10d. check
+11. Else the NotFound page will be rendered
+12. Once this is all mounted then an event listener will be added to listen for hashChange events
+13. if a hashChange event is found then set the route to the location.hsh
+14. Get the token
+15. Decode the token
+16. Set the state to the user and set as authorized
+17. if a user signs out then remove item from local storage
